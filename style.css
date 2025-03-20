@@ -1,0 +1,151 @@
+/* 전체 페이지 스타일 */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* 제목 스타일 */
+h1 {
+  color: #a6d0a6;
+  font-size: 2.5rem;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+/* 전체 컨테이너 */
+.container {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 슬라이드 스타일 */
+.slide {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* 개별 선물 박스 */
+.gift {
+  width: 60%;
+  height: 70%;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* 내용 넘침 방지 */
+}
+
+/* 🎵 음악 블록을 2열로 배치 */
+.music-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2열 배치 */
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* 🎵 개별 음악 블록 */
+.music_block {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 비디오 크기 조정 */
+.gift video {
+  width: 90%;
+  max-width: 400px;
+  max-height: 250px; /* 화면 넘는 문제 해결 */
+  height: auto;
+  margin-top: 10px;
+}
+
+/* 이미지 크기 조정 */
+.gift img {
+  max-width: 90%;
+  max-height: 300px; /* 크기 제한 */
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* 오디오 & 비디오 그룹 */
+.audio-container,
+.video-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 오디오 플레이어 */
+audio {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+}
+
+/* 비디오 크기 조정 */
+.video-container video {
+  width: 100%;
+  max-width: 350px;
+  max-height: 200px;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* 버튼 컨테이너 */
+.buttons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 30px; /* 화면 아래쪽에서 30px 띄움 */
+  padding: 0 80px; /* 좌우 여백 80px 추가 */
+  box-sizing: border-box;
+}
+
+/* 버튼 스타일 */
+.buttons button {
+  background-color: #a6d0a6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* 버튼 hover 효과 */
+.buttons button:hover {
+  background-color: #8cbf8c;
+}
