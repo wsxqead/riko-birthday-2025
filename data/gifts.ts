@@ -134,7 +134,7 @@ export const gifts: Gift[] = [
     title: "🎂 마인크래프트 케이크 축하맵",
     description:
       "🎇 하트 폭죽 이벤트와 함께 리코의 생일을 완벽하게 마무리하자!",
-    media: { images: ["/images/cake_map.png"] },
+    media: { images: ["/images/cake_map_t.png"] },
     next: null,
     prev: "video-streamers",
   },
