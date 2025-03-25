@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 import { GetStaticProps, GetStaticPaths } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { gifts, Gift } from "../../data/gifts";
-
+import { gifts, Gift } from "@/data/gifts";
+import "../styles/globals.css"; // ✅ 스타일 적용
 
 interface GiftPageProps {
   initialGift: Gift;

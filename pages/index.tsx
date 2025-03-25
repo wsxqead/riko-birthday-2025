@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { gifts } from "../data/gifts";
+import { gifts } from "@/data/gifts";
 import "../styles/globals.css"; // ✅ 스타일 적용
 
 export default function Home() {
