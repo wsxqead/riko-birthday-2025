@@ -4,7 +4,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { gifts, Gift } from "@/data/gifts";
-import "../styles/globals.css"; // ✅ 스타일 적용
+import "../../styles/globals.css"; // ✅ 스타일 적용
 
 interface GiftPageProps {
   initialGift: Gift;
@@ -38,20 +38,33 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
         {/* 🎨 여러 개의 이미지 표시 */}
         {gift.media.images && gift.media.images.length > 0 && (
           <div className="image-gallery">
-            {gift.media.images.map((img, index) => (
-              <Image
-                key={`${currentId}-img-${index}`} // ✅ key에 currentId 포함하여 고유값 보장
-                src={img}
-                alt={`${gift.title} - 이미지 ${index + 1}`}
-                width={500}
-                height={300}
-                layout="intrinsic"
-                objectFit="contain"
-                priority
-              />
-            ))}
+            {gift.media.images.map((img, index) => {
+              // ✅ `img`가 문자열인지 확인 후 className 적용
+              let imageClass = "";
+              if (typeof img === "string") {
+                if (img.includes("chiko_skin")) imageClass = "chiko-skin";
+                if (img.includes("chiko_bread")) imageClass = "chiko-bread";
+              }
+
+              return (
+                <div
+                  key={`${gift.id}-img-${index}`}
+                  className={`image-wrapper ${imageClass}`}
+                >
+                  <Image
+                    src={img}
+                    alt={`${gift.title} - 이미지 ${index + 1}`}
+                    width={500}
+                    height={300}
+                    layout="intrinsic"
+                    objectFit="cover"
+                  />
+                </div>
+              );
+            })}
           </div>
         )}
+
         {/* 🎵 여러 개의 오디오 파일 */}
         {gift.media.audios && gift.media.audios.length > 0 && (
           <div className="audio-list">

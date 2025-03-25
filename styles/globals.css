@@ -73,10 +73,6 @@ h1 {
   transition: transform 0.3s ease;
 }
 
-.gift-card:hover {
-  transform: scale(1.02);
-}
-
 /* 🔹 이미지 갤러리 */
 .image-gallery {
   display: grid;
@@ -87,15 +83,36 @@ h1 {
 
 .image-gallery img {
   width: 100%;
+  max-width: 500px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
   transition: transform 0.2s ease-in-out;
 }
 
-/* .image-gallery img:hover {
-  transform: scale(1.05);
-} */
+/* 🔹 기본 이미지 스타일 */
+.image-gallery .image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* 🔹 치코 스킨 개별 스타일 */
+.image-gallery .chiko-skin {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* 🔹 치코 빵 개별 스타일 */
+.image-gallery .chiko-bread {
+  max-width: 250px;
+  margin: 0 auto;
+}
 
 /* 🔹 오디오 & 비디오 스타일 */
 .audio-list,
