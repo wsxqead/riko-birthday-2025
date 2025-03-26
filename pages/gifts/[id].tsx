@@ -26,7 +26,7 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
       const updatedGift = gifts.find((g) => g.id === currentId);
       if (updatedGift) setGift(updatedGift);
     }
-  }, [currentId]);
+  }, [currentId, router.asPath]); // ✅ URL 변경 감지
 
   if (!gift) return <h1>404 - 선물을 찾을 수 없습니다.</h1>;
 

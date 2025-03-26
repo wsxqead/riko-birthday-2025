@@ -210,7 +210,11 @@ h1 {
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  .gift-title {
+    font-size: small;
   }
 
   .image-gallery {
@@ -218,8 +222,9 @@ h1 {
   }
 
   .nav-buttons {
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
+    align-items: baseline;
   }
 
   .nav-buttons button {
