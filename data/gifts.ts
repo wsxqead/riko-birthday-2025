@@ -43,7 +43,7 @@ export const gifts: Gift[] = [
     title: "📺 생일 기념 방송 배경",
     description: "리코의 생일 방송을 더욱 특별하게 만들어줄 맞춤형 배경!",
     media: {
-      images: ["/images/day_room_final.jpg", "/images/night_room_final.jpg"],
+      images: ["/images/day_room_final.png", "/images/night_room_final.png"],
     },
     next: "birthday-illustration",
     prev: "song-with-you",

@@ -81,6 +81,12 @@ h1 {
   justify-content: center;
 }
 
+/* ✅ 이미지가 한 개만 있을 경우 flex 정렬로 변경 */
+.image-gallery:has(img:only-child) {
+  display: flex;
+  justify-content: center;
+}
+
 .image-gallery img {
   width: 100%;
   max-width: 500px;
