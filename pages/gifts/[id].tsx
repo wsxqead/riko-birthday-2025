@@ -14,19 +14,24 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
   const router = useRouter();
   const [gift, setGift] = useState<Gift | null>(initialGift);
 
-  // ✅ `router.query.id` 타입 변환
   const currentId: string | null =
     typeof router.query.id === "string"
       ? router.query.id
       : router.query.id?.[0] ?? null;
 
-  // ✅ useEffect로 동적 데이터 업데이트
   useEffect(() => {
-    if (currentId) {
-      const updatedGift = gifts.find((g) => g.id === currentId);
+    if (!router.isReady) return;
+
+    const id =
+      typeof router.query.id === "string"
+        ? router.query.id
+        : router.query.id?.[0] ?? null;
+
+    if (id) {
+      const updatedGift = gifts.find((g) => g.id === id);
       if (updatedGift) setGift(updatedGift);
     }
-  }, [currentId, router.asPath]); // ✅ URL 변경 감지
+  }, [router.isReady, router.query.id]);
 
   if (!gift) return <h1>404 - 선물을 찾을 수 없습니다.</h1>;
 
