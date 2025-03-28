@@ -1,41 +1,44 @@
+export interface MediaGroup {
+  label: string;
+  audios?: string[];
+  videos?: string[];
+  images?: string[];
+  links?: { url: string; label: string }[];
+}
 export interface Gift {
   id: string;
   title: string;
   description: string;
-  media: {
+  media?: {
     images?: string[];
     audios?: string[];
     videos?: string[];
     links?: { url: string; label: string }[];
   };
+  mediaGroups?: MediaGroup[]; // ✅ 새로 추가된 속성
   next: string | null;
   prev: string | null;
 }
 
 export const gifts: Gift[] = [
-  // 🎶 1-1. 축하 노래 - "오늘은 리코의 날"
   {
-    id: "song-riko-day",
-    title: "🎶 축하 노래 – 오늘은 리코의 날",
-    description: "리코를 위해 치코가 준비한 특별한 노래! 🎵",
-    media: {
-      audios: ["/audio/오늘은_리코의_날.mp3"],
-      videos: ["/video/오늘은_리코의_날.mp4"],
-    },
-    next: "song-with-you",
-    prev: null,
-  },
-  // 🎶 1-2. 축하 노래 - "방송을 켜면 (With You)"
-  {
-    id: "song-with-you",
-    title: "🎶 축하 노래 – 방송을 켜면 (With You)",
-    description: "만약 리코가 치코에게 노래를 선물한다면...? 🎼",
-    media: {
-      audios: ["/audio/방송을_켜면.mp3"],
-      videos: ["/video/방송을_켜면.mp4"],
-    },
+    id: "birthday-songs",
+    title: "🎶 치코의 생일 축하 노래",
+    description: "치코가 준비한 두 개의 생일 노래를 함께 감상해봐! 🎤",
+    mediaGroups: [
+      {
+        label: "🎼 오늘은 리코의 날",
+        audios: ["/audio/오늘은_리코의_날.mp3"],
+        videos: ["/video/오늘은_리코의_날.mp4"],
+      },
+      {
+        label: "🎼 방송을 켜면 (With You)",
+        audios: ["/audio/방송을_켜면.mp3"],
+        videos: ["/video/방송을_켜면.mp4"],
+      },
+    ],
     next: "birthday-bg",
-    prev: "song-riko-day",
+    prev: null,
   },
   // 📺 2. 생일 기념 방송 배경 (이미지가 여러 개)
   {

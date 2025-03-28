@@ -31,7 +31,7 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
       const updatedGift = gifts.find((g) => g.id === id);
       if (updatedGift) setGift(updatedGift);
     }
-  }, [router.isReady, router.query.id]);
+  }, [currentId, router.isReady, router.query.id]);
 
   if (!gift) return <h1>404 - 선물을 찾을 수 없습니다.</h1>;
 
@@ -41,7 +41,7 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
         <h1>{gift.title}</h1>
         <p>{gift.description}</p>
         {/* 🎨 여러 개의 이미지 표시 */}
-        {gift.media.images && gift.media.images.length > 0 && (
+        {gift.media?.images && gift.media.images.length > 0 && (
           <div className="image-gallery">
             {gift.media.images.map((img, index) => {
               // ✅ `img`가 문자열인지 확인 후 className 적용
@@ -71,7 +71,7 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
         )}
 
         {/* 🎵 여러 개의 오디오 파일 */}
-        {gift.media.audios && gift.media.audios.length > 0 && (
+        {gift.media?.audios && gift.media.audios.length > 0 && (
           <div className="audio-list">
             {gift.media.audios.map((audio, index) => (
               <div key={`${currentId}-audio-${index}`}>
@@ -84,7 +84,7 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
           </div>
         )}
         {/* 🎬 여러 개의 비디오 파일 */}
-        {gift.media.videos && gift.media.videos.length > 0 && (
+        {gift.media?.videos && gift.media.videos.length > 0 && (
           <div className="video-list" key={currentId}>
             {" "}
             {/* ✅ key에 currentId 지정 */}
@@ -98,8 +98,31 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
             ))}
           </div>
         )}
+
+        {gift.mediaGroups && gift.mediaGroups.length > 0 && (
+          <div className="media-group-row">
+            {gift.mediaGroups.map((group, idx) => (
+              <div className="media-column" key={`${gift.id}-group-${idx}`}>
+                <h3>{group.label}</h3>
+
+                {group.audios?.map((audio, i) => (
+                  <audio key={`audio-${i}`} controls>
+                    <source src={audio} type="audio/mpeg" />
+                  </audio>
+                ))}
+
+                {group.videos?.map((video, i) => (
+                  <video key={`video-${i}`} controls>
+                    <source src={video} type="video/mp4" />
+                  </video>
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
+
         {/* 🌍 여러 개의 링크 버튼 */}
-        {gift.media.links && gift.media.links.length > 0 && (
+        {gift.media?.links && gift.media.links.length > 0 && (
           <div className="link-buttons">
             {gift.media.links.map((link, index) => (
               <a

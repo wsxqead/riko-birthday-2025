@@ -202,8 +202,31 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* 🔹 반응형 스타일 */
+.media-group-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.media-column {
+  flex: 1 1 45%;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.media-column h3 {
+  margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
+  .media-column {
+    flex: 1 1 100%;
+  }
+
   .container {
     padding: 15px;
     max-width: 95%;
