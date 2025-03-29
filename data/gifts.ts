@@ -57,7 +57,7 @@ export const gifts: Gift[] = [
     title: "🎨 생일 기념 일러스트",
     description: "리코의 생일을 기념하는 특별한 일러스트!",
     // media: { images: ["/images/birthday_illustration.png"] },
-    media: { images: ["/images/1742897981389.png"] },
+    media: { images: ["/images/1743267638862.png"] },
     next: "stellachiko19",
     prev: "birthday-bg",
   },
