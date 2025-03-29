@@ -100,7 +100,7 @@ export const gifts: Gift[] = [
     title: "🎢 마인크래프트 리코랜드",
     description:
       "🎠 마인크래프트 속에서 리코만을 위한 특별한 놀이공원을 만들었어!",
-    media: { images: ["/images/rikoland.png"] },
+    media: { images: ["/images/riko_invite.png"] },
     next: "video-moments",
     prev: "chiko-bread",
   },

@@ -204,6 +204,7 @@ h1 {
 
 .media-group-row {
   display: flex;
+  display: -webkit-inline-box;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
@@ -218,13 +219,16 @@ h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.media-column video {
+  width: 100%;
+}
 .media-column h3 {
   margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
   .media-column {
-    flex: 1 1 100%;
+    flex: 1 1 95%;
   }
 
   .container {
