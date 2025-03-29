@@ -49,7 +49,7 @@ export const gifts: Gift[] = [
       images: ["/images/day_room_final.png", "/images/night_room_final.png"],
     },
     next: "birthday-illustration",
-    prev: "song-with-you",
+    prev: "birthday-songs",
   },
   // 🎨 3. 생일 기념 일러스트
   {
