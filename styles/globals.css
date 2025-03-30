@@ -226,6 +226,11 @@ h1 {
   margin-bottom: 10px;
 }
 
+.main-image {
+  margin: 20px auto;
+  max-width: 100%;
+}
+
 @media (max-width: 768px) {
   .media-column {
     flex: 1 1 95%;
