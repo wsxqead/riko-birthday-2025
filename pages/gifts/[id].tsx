@@ -91,9 +91,15 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
             {gift.media.videos.map((video, index) => (
               <div key={`${currentId}-video-${index}`}>
                 <h3>🎥 비디오 {index + 1}</h3>
-                <video controls>
+                <iframe
+                  src={video}
+                  width="640"
+                  height="360"
+                  allow="autoplay"
+                ></iframe>
+                {/* <video controls>
                   <source src={video} type="video/mp4" />
-                </video>
+                </video> */}
               </div>
             ))}
           </div>
@@ -112,9 +118,16 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
                 ))}
 
                 {group.videos?.map((video, i) => (
-                  <video key={`video-${i}`} controls>
-                    <source src={video} type="video/mp4" />
-                  </video>
+                  // <video key={`video-${i}`} controls>
+                  //   <source src={video} type="video/mp4" />
+                  // </video>
+                  <iframe
+                    key={`video-${i}`}
+                    src={video}
+                    width="640"
+                    height="360"
+                    allow="autoplay"
+                  ></iframe>
                 ))}
               </div>
             ))}

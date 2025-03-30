@@ -219,7 +219,7 @@ h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.media-column video {
+.media-column iframe {
   width: 100%;
 }
 .media-column h3 {
