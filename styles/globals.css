@@ -204,7 +204,6 @@ h1 {
 
 .media-group-row {
   display: flex;
-  display: -webkit-inline-box;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;

@@ -28,18 +28,11 @@ export const gifts: Gift[] = [
     mediaGroups: [
       {
         label: "🎼 오늘은 리코의 날",
-        audios: ["/audio/오늘은_리코의_날.mp3"],
-        videos: [
-          "https://drive.google.com/file/d/1nS8QY_vYztV8gvCdSPRN3srOEYwoaZFb/preview",
-        ],
-        // videos: ["/video/오늘은_리코의_날.mp4"],
+        videos: ["https://buly.kr/15OXXC2"],
       },
       {
         label: "🎼 방송을 켜면 (With You)",
-        audios: ["/audio/방송을_켜면.mp3"],
-        videos: [
-          "https://drive.google.com/file/d/16xxUFkaHeIu1KfeaOdK6KXH0BSv3igYi/preview",
-        ],
+        videos: ["https://buly.kr/2qY7LL1"],
       },
     ],
     next: "birthday-bg",
@@ -61,8 +54,7 @@ export const gifts: Gift[] = [
     id: "birthday-illustration",
     title: "🎨 생일 기념 일러스트",
     description: "리코의 생일을 기념하는 특별한 일러스트!",
-    // media: { images: ["/images/birthday_illustration.png"] },
-    media: { images: ["/images/1743267638862.png"] },
+    media: { images: ["https://buly.kr/FsIBvnc"] },
     next: "stellachiko19",
     prev: "birthday-bg",
   },
@@ -105,7 +97,7 @@ export const gifts: Gift[] = [
     title: "🎢 마인크래프트 리코랜드",
     description:
       "🎠 마인크래프트 속에서 리코만을 위한 특별한 놀이공원을 만들었어!",
-    media: { images: ["/images/riko_invite.png"] },
+    media: { images: ["/images/riko_invite_new.png"] },
     next: "video-moments",
     prev: "chiko-bread",
   },

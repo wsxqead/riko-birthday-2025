@@ -11,10 +11,10 @@ export default function Home() {
       {/* 🎀 생일 이미지 삽입 */}
       <div className="main-image">
         <Image
-          src="/images/happyday.png"
+          src="/images/mainImage.png"
           alt="리코 생일 축하 이미지"
-          width={640}
-          height={300}
+          width={500}
+          height={500}
           layout="intrinsic"
         />
       </div>
