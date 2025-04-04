@@ -89,20 +89,18 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
             {" "}
             {/* ✅ key에 currentId 지정 */}
             {gift.media.videos.map((video, index) => (
-              
-                
-                <div className="responsive-video" key={`${currentId}-video-${index}`}>
-  <iframe
-    src={video}
-    allow="autoplay"
-    allowFullScreen
-    frameBorder="0"
-  ></iframe>
-</div>
-                {/* <video controls>
-                  <source src={video} type="video/mp4" />
-                </video> */}
-              
+              <div
+                className="responsive-video"
+                key={`${currentId}-video-${index}`}
+              >
+                <h3>🎥 비디오 {index + 1}</h3>
+                <iframe
+                  src={video}
+                  width="640"
+                  height="360"
+                  allow="autoplay"
+                ></iframe>{" "}
+              </div>
             ))}
           </div>
         )}
