@@ -145,7 +145,15 @@ export const gifts: Gift[] = [
     description:
       "🎇 하트 폭죽 이벤트와 함께 리코의 생일을 완벽하게 마무리하자!",
     media: { images: ["/images/cake_map_t.png"] },
-    next: null,
+    next: "message",
     prev: "video-streamers",
+  },
+  {
+    id: "message",
+    title: "✉️ 마음을 담은 편지",
+    description: "✉️ 진심을 가득담은 편지",
+    media: { images: ["/images/1.png", "/images/2.png", "/images/3.png"] },
+    next: null,
+    prev: "cake-map",
   },
 ];
