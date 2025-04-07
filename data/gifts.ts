@@ -107,9 +107,7 @@ export const gifts: Gift[] = [
     title: "🎞 방송 영상 모음",
     description: "리코와 함께했던 추억들을 한데 모아 영상으로 정리했어!",
     media: {
-      videos: [
-        "https://drive.google.com/file/d/140rK3VUh_TVXAqrqWgQ1Bi4tKRfF0MCu/preview",
-      ],
+      videos: ["https://buly.kr/9XKwnu3"],
     },
     next: "video-foreign",
     prev: "rikoland",
@@ -120,9 +118,7 @@ export const gifts: Gift[] = [
     title: "🌍 외국인 축하 영상",
     description: "외국인 유튜버들이 준비한 생일 축하 영상! 🌎",
     media: {
-      videos: [
-        "https://drive.google.com/file/d/1PmNz29V1Ddcys5yVr0dKtjq3Zdo1uBIr/preview",
-      ],
+      videos: ["https://buly.kr/44xSOfm"],
     },
     next: "video-streamers",
     prev: "video-moments",
@@ -133,9 +129,7 @@ export const gifts: Gift[] = [
     title: "🎥 스트리머 축하 영상",
     description: "리코와 함께했던 스트리머들의 축하 메시지! 📽️",
     media: {
-      videos: [
-        "https://drive.google.com/file/d/1cMI6zWkkMVXOnGt41oiESM2NT6DnWRMP/preview",
-      ],
+      videos: ["https://buly.kr/2JnsaSq"],
     },
     next: "cake-map",
     prev: "video-foreign",
