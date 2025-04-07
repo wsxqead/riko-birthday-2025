@@ -13,6 +13,7 @@ interface GiftPageProps {
 export default function GiftPage({ initialGift }: GiftPageProps) {
   const router = useRouter();
   const [gift, setGift] = useState<Gift | null>(initialGift);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const currentId: string | null =
     typeof router.query.id === "string"
@@ -55,6 +56,8 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
                 <div
                   key={`${gift.id}-img-${index}`}
                   className={`image-wrapper ${imageClass}`}
+                  onClick={() => setSelectedImage(img)} // ✅ 클릭 시
+                  style={{ cursor: "zoom-in" }}
                 >
                   <Image
                     src={img}
@@ -163,6 +166,11 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
           )}
         </div>
       </div>
+      {selectedImage && (
+        <div className="image-modal" onClick={() => setSelectedImage(null)}>
+          <img src={selectedImage} alt="확대 이미지" />
+        </div>
+      )}
     </div>
   );
 }

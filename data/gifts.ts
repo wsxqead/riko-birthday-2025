@@ -107,7 +107,9 @@ export const gifts: Gift[] = [
     title: "🎞 방송 영상 모음",
     description: "리코와 함께했던 추억들을 한데 모아 영상으로 정리했어!",
     media: {
-      videos: ["/video/riko_moments.mp4"],
+      videos: [
+        "https://drive.google.com/file/d/140rK3VUh_TVXAqrqWgQ1Bi4tKRfF0MCu/preview",
+      ],
     },
     next: "video-foreign",
     prev: "rikoland",
