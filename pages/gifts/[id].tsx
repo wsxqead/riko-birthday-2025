@@ -168,7 +168,7 @@ export default function GiftPage({ initialGift }: GiftPageProps) {
       </div>
       {selectedImage && (
         <div className="image-modal" onClick={() => setSelectedImage(null)}>
-          <img src={selectedImage} alt="확대 이미지" />
+          <Image src={selectedImage} alt="확대 이미지" />
         </div>
       )}
     </div>
